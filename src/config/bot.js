@@ -43,7 +43,7 @@ export const botConfig = {
   commands: {
     // Bot owner user IDs (comma-separated in OWNER_IDS env var).
     // Owners can access owner/admin-level bot commands.
-    owners: process.env.OWNER_IDS?.split(",") || [],
+    owners: process.env.1434147588788981892?.split(",") || [],
 
     // Default wait time between command uses (in seconds).
     defaultCooldown: 3, 
@@ -61,9 +61,9 @@ export const botConfig = {
   applications: {
     // Default questions shown when someone fills out an application.
     defaultQuestions: [
-      { question: "What is your name?", required: true },
-      { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
+      { question: "Adın Nedir?", required: true },
+      { question: "Kaç Yaşındasın?", required: true },
+      { question: "Neden Katılmak İstiyorsun?", required: true },
     ],
 
     // Embed colors by application status.
@@ -141,7 +141,7 @@ export const botConfig = {
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "Distant Bot",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -294,10 +294,10 @@ export const botConfig = {
   // =========================
   verification: {
     // Message shown when posting the verification panel.
-    defaultMessage: "Click the button below to verify yourself and gain access to the server!",
+    defaultMessage: "Kayıt Olmak İçin Aşağıdaki Butona Tıklaman Yeterli Olacaktır.",
 
     // Text on the verification button.
-    defaultButtonText: "Verify",
+    defaultButtonText: "Doğrula",
 
     // Automatic verification behavior.
     autoVerify: {
@@ -403,19 +403,19 @@ export const botConfig = {
     types: {
       // Built-in counter types and how each count is calculated.
       members: {
-        name: "👥 Members",
-        description: "Total members in the server",
+        name: "👥 Üyeler",
+        description: "Sunucudaki Toplam Üye Sayısı",
         getCount: (guild) => guild.memberCount.toString(),
       },
       bots: {
-        name: "🤖 Bots",
-        description: "Total bot accounts in the server",
+        name: "🤖 Botlar",
+        description: "Sunucudaki Toplam Bot Sayısı",
         getCount: (guild) =>
           guild.members.cache.filter((m) => m.user.bot).size.toString(),
       },
       members_only: {
-        name: "👤 Humans",
-        description: "Total human members (non-bots)",
+        name: "👤 Üyeler",
+        description: "Toplam Üye Sayısı (Botlar Hariç)",
         getCount: (guild) =>
           guild.members.cache.filter((m) => !m.user.bot).size.toString(),
       },
@@ -426,13 +426,13 @@ export const botConfig = {
   // GENERIC BOT MESSAGES
   // =========================
   messages: {
-    noPermission: "You do not have permission to use this command.",
-    cooldownActive: "Please wait {time} before using this command again.",
-    errorOccurred: "An error occurred while executing this command.",
+    noPermission: "Bu Komutu Kullanmak İçin İznin Yok.",
+    cooldownActive: "Tekrar Kullanmak İçin {time} Saniye Beklemelisiniz",
+    errorOccurred: "Komut Çalıştırılırken Hata Oluştu. Lütfen Tekrar Deneyin.",
     missingPermissions:
-      "I am missing required permissions to perform this action.",
-    commandDisabled: "This command has been disabled.",
-    maintenanceMode: "The bot is currently in maintenance mode.",
+      "Bunu Kullanmak İçin İznim Bulunmamaktadır.",
+    commandDisabled: "Bu Komut Yasaklıdır.",
+    maintenanceMode: "Bot Şuanda Bakımda.",
   },
 
   // =========================
@@ -441,30 +441,30 @@ export const botConfig = {
   // Set any feature to `false` to disable it globally.
   features: {
     // Core systems.
-    economy: true,
-    leveling: true,
-    moderation: true,
-    logging: true,
-    welcome: true,
+    ekonomi: true,
+    level: true,
+    moderasyon: true,
+    log: true,
+    hoşgeldin: true,
 
     // Community engagement systems.
-    tickets: true,
-    giveaways: true,
-    birthday: true,
+    ticketler: true,
+    çekilişler: true,
+    doğumgünü: true,
     counter: true,
 
     // Security and self-service systems.
-    verification: true,
-    reactionRoles: true,
+    doğrulama: true,
+    tepkiRolleri: true,
     joinToCreate: true,
 
     // Utility/quality-of-life modules.
-    voice: true,
-    search: true,
-    tools: true,
-    utility: true,
-    community: true,
-    fun: true,
+    ses: true,
+    arama: true,
+    araçlar: true,
+    fayda: true,
+    topluluk: true,
+    eğlence: true,
   },
 };
 
