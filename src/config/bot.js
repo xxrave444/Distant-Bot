@@ -324,7 +324,7 @@ export const botConfig = {
 
       // Human-readable descriptions for each criteria mode.
       criteria: {
-        account_age: "Hesap, belirtilen günden daha eski olmalıdır.,
+        account_age: "Hesap belirtilen günden daha eski olmalıdır",
         server_size: "Sunucunun 1000'den az üyesi varsa tüm kullanıcılar",
         none: "Tüm kullanıcılar"
       }
