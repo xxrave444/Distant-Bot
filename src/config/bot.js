@@ -42,7 +42,7 @@ export const botConfig = {
   // =========================
   commands: {
     // Bot owner user IDs (comma-separated in OWNER_IDS env var).
-    // Owners can access owner/admin-level bot commands.
+    // Sunucu Sahipleri Tüm Yetkilere Erişebilir.
     owners: process.env["1434147588789881892"]?.split(",") || [],
 
     // Default wait time between command uses (in seconds).
@@ -308,7 +308,7 @@ export const botConfig = {
       defaultCriteria: "none",
 
       // Days used when `defaultCriteria` is `account_age`.
-      defaultAccountAgeDays: 7,
+      TemelDiscordHesapYılı: 7,
 
       // Member count threshold used when `defaultCriteria` is `server_size`.
       // Example: 1000 means auto-verify if server has fewer than 1000 members.
@@ -324,9 +324,9 @@ export const botConfig = {
 
       // Human-readable descriptions for each criteria mode.
       criteria: {
-        account_age: "Account must be older than specified days",
-        server_size: "All users if server has less than 1000 members",
-        none: "All users immediately"
+        account_age: "Hesap, belirtilen günden daha eski olmalıdır.,
+        server_size: "Sunucunun 1000'den az üyesi varsa tüm kullanıcılar",
+        none: "Tüm kullanıcılar"
       }
     },
 
@@ -364,11 +364,11 @@ export const botConfig = {
     // Welcome template posted when a user joins.
     // Placeholders: {user}, {server}, {memberCount}
     defaultWelcomeMessage:
-      "Welcome {user} to {server}! We now have {memberCount} members!",
+      "{user} Sunucumuza Katıldı! Seninle Beraber {memberCount} Kişi Olduk!",
     // Goodbye template posted when a user leaves.
     // Placeholders: {user}, {memberCount}
     defaultGoodbyeMessage:
-      "{user} has left the server. We now have {memberCount} members.",
+      "{user} Sunucudan Ayrıldı. Sensiz {memberCount} Kişi Kaldık.",
     // Channel ID for welcome messages.
     defaultWelcomeChannel: null,
     // Channel ID for goodbye messages.
@@ -381,8 +381,8 @@ export const botConfig = {
   counters: {
     defaults: {
       // Default naming/description templates for counter entries.
-      name: "{name} Counter",
-      description: "Server {name} counter",
+      name: "{name} Sayaç",
+      description: "{name} Sayacı",
       // Channel type used for counters (typically "voice").
       type: "voice",
       // Channel name format. `{count}` is replaced automatically.
@@ -396,9 +396,9 @@ export const botConfig = {
     },
     messages: {
       // Default response messages for counter actions.
-      created: "✅ Created counter **{name}**",
-      deleted: "🗑️ Deleted counter **{name}**",
-      updated: "🔄 Updated counter **{name}**",
+      created: "✅ Sayaç Oluşturuldu **{name}**",
+      deleted: "🗑️ Sayaç Kaldırıldı **{name}**",
+      updated: "🔄 Sayaç Güncellendi **{name}**",
     },
     types: {
       // Built-in counter types and how each count is calculated.
