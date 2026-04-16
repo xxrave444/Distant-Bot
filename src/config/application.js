@@ -15,13 +15,13 @@ const __dirname = path.dirname(__filename);
 const appConfig = {
   paths: {
     root: path.join(__dirname, "../.."),
-    commands: path.join(__dirname, "../commands"),
-    events: path.join(__dirname, "../events"),
+    commands: path.join(__dirname, "../komutlar"),
+    events: path.join(__dirname, "../eventler"),
     config: __dirname,
-    utils: path.join(__dirname, "../utils"),
-    services: path.join(__dirname, "../services"),
+    utils: path.join(__dirname, "../diğer"),
+    services: path.join(__dirname, "../servisler"),
     handlers: path.join(__dirname, "../handlers"),
-    interactions: path.join(__dirname, "../interactions"),
+    interactions: path.join(__dirname, "../etkileşimler"),
   },
 
   bot: {
